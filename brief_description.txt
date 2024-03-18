@@ -1,0 +1,15 @@
+Imports: The code starts by importing necessary libraries such as numpy, pandas, matplotlib, seaborn, and sklearn modules.
+
+Read Data: The code reads the dataset from 'loan.csv' into a pandas DataFrame named 'df' using pd.read_csv().
+
+Data Exploration: It performs initial data exploration by displaying the first few rows of the DataFrame using df.head() and printing the information about the DataFrame using df.info(). It also checks for missing values using df.isnull().sum().
+
+Data Preprocessing: It creates new columns 'loanAmount_log', 'TotalIncome', and 'TotalIncome_log'. Missing values are filled using the mode for categorical columns and mean for numerical columns. The categorical variables are encoded using LabelEncoder. Finally, the data is split into training and testing sets and scaled using StandardScaler.
+
+Visualization: It visualizes the data by displaying the count of people who take a loan grouped by gender, marital status, dependents, self-employed status, loan amount, and credit history using sns.countplot().
+
+Model Training and Evaluation: It trains multiple classifiers including Random Forest, Gaussian Naive Bayes, Decision Tree, and K Neighbors classifiers using the training data. The accuracy of each classifier is evaluated using the testing data.
+
+Model Evaluation: It prints the accuracy of each classifier using metrics.accuracy_score().
+
+Output: The accuracy of each classifier is printed to evaluate which classifier performs better on the given dataset.
